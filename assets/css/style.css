@@ -1,0 +1,157 @@
+.aws-wishlist--trigger:not(.wishlist-page) {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #dfdfdf;
+  cursor: pointer;
+
+}
+
+.aws-wishlist--trigger.active path {
+  fill: #bb0202;
+}
+
+/*******************
+  Display Wishlist
+*******************/
+
+.aws-wishlist--table {
+  text-align: left;
+  max-width: 1200px;
+  margin-inline: auto;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Table Head */
+.aws-wishlist--table thead {
+  background-color: #ecebeb;
+}
+
+.aws-wishlist--table thead th {
+  padding-inline: 0.5em;
+}
+
+.aws-wishlist--table :where(th, td) {
+  padding: 0.5em;
+}
+
+.aws-wishlist--table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #ecebeb;
+}
+
+.aws-wishlist--img {
+  width: 130px;
+}
+
+.aws-wishlist--img img {
+  width: 70px;
+}
+
+.aws-wishlist--title h3 {
+  font-size: 1em;
+}
+
+/* Remove From Wishlist Button */
+.remove-product.wishlist-page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-weight: bold;
+  background: #dadada;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Add To Cart Button */
+td.aws-wishlist--add-to-cart a {
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid #000;
+  min-width: 120px;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #fff;
+  color: #000;
+}
+
+td.aws-wishlist--add-to-cart a.added_to_cart.wc-forward {
+  border: none;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.aws-wishlist--label {
+  display: none;
+  visibility: hidden;
+  margin-right: 15px;
+}
+
+.aws-wishlist--stock {
+  min-width: 130px;
+}
+
+
+/***********************
+  Toast Notification 
+***********************/
+
+.toastify {
+  overflow: hidden;
+}
+
+.toastify-progress {
+  width: 0;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  mix-blend-mode: plus-lighter;
+  transition: width 0.5s;
+}
+
+
+@media screen and (max-width: 867px) {
+
+  .aws-wishlist--table thead {
+    display: none;
+  }
+
+  .aws-wishlist--table tr {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  td.aws-wishlist--img {
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+  }
+
+  .aws-wishlist--table td {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 0;
+  }
+
+  .aws-wishlist--label {
+    display: inline-block;
+    visibility: visible;
+    font-weight: bold;
+  }
+}
