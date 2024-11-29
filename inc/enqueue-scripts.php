@@ -13,8 +13,9 @@ if (!defined('ABSPATH') || !defined('AWS_PLUGIN_DIR')) {
 function aws_enqueue_scripts() {
 
   // CSS
-  wp_enqueue_style('aws-style', AWS_PLUGIN_URL . 'dist/style.css', [], false);
+  wp_enqueue_style('aws-style', AWS_PLUGIN_URL . 'dist/style.css', [], '1.0');
 
+  // JS
   wp_enqueue_script('aws-wishlist-script', AWS_PLUGIN_URL . 'dist/main.js', ['jquery'], '1.0', false);
 
   // Localize script to pass data to JavaScript
@@ -35,4 +36,6 @@ function aws_enqueue_scripts() {
     'wishlist' => array_values($wishlist),
   ]);
 }
+
+
 add_action('wp_enqueue_scripts', 'aws_enqueue_scripts');

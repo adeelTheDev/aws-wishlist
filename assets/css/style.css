@@ -1,3 +1,5 @@
+@import "toastify.css";
+
 .aws-wishlist--trigger:not(.wishlist-page) {
   position: absolute;
   top: 10px;
@@ -14,8 +16,17 @@
 
 }
 
-.aws-wishlist--trigger.active path {
-  fill: #bb0202;
+.aws-wishlist--trigger svg {
+  width: 20px;
+  height: 20px;
+}
+
+.wishlist-page.aws-wishlist--trigger svg:not(.cross-svg) {
+  display: none !important;
+}
+
+.aws-wishlist--trigger.active svg:not(.cross-svg) path {
+  fill: #d50505;
 }
 
 /*******************
@@ -102,27 +113,6 @@ td.aws-wishlist--add-to-cart a.added_to_cart.wc-forward {
 .aws-wishlist--stock {
   min-width: 130px;
 }
-
-
-/***********************
-  Toast Notification 
-***********************/
-
-.toastify {
-  overflow: hidden;
-}
-
-.toastify-progress {
-  width: 0;
-  height: 5px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: red;
-  mix-blend-mode: plus-lighter;
-  transition: width 0.5s;
-}
-
 
 @media screen and (max-width: 867px) {
 

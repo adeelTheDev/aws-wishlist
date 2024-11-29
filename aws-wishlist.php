@@ -1,12 +1,12 @@
 <?php
 /*
 * Plugin Name:       Awesome Wishlist
-* Author URI:        https://muhammadadeel.net/awesome-wishlist-plugin/
 * Description:       Enable wishlist for your wooCommerce store.
 * Version:           1.0
 * Requires at least: 6.0
 * Requires PHP:      8.0
 * Requires Plugins:  woocommerce
+* Author URI:        https://muhammadadeel.net/awesome-wishlist-plugin/
 * Author:            Muhammad Adeel
 * Author URI:        https://muhammadadeel.net/
 * License:           GPL v2 or later
